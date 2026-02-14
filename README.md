@@ -59,10 +59,10 @@ Laravel communicates with Flask via HTTP API (JSON Response).
 
 | Component | Technology |
 |--------|--------|
-| Web Framework | Laravel 10 (PHP) / JavaScript |
+| Web Framework | Laravel 10 (PHP) |
 | Machine Learning API | Python Flask |
 | Database | MySQL |
-| Visualization | Chart.js |
+| Visualization | Chart.js  / JavaScript |
 | Styling | Bootstrap / Tailwind |
 | ML Library | scikit-learn |
 | Communication | REST API (JSON HTTP) |
