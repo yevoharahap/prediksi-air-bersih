@@ -1,0 +1,16 @@
+Buka Terminal :
+Ketik :
+.\.venv\Scripts\Activate.ps1
+
+Masuk Folder Python, ketik :
+cd python
+
+Jalankan FLask Python, ketik :
+py app.py
+
+Buka Terminal Baru :
+Ketik :
+php artisan serve
+
+masuk ke link server : 
+   INFO  Server running on [http://127.0.0.1:8000].  
