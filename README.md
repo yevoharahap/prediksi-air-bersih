@@ -162,6 +162,4 @@ python app.py
 # NOTE:
 # both servers MUST be running
 # if prediction page error -> Flask server is not active
-
-<br>
 ```
