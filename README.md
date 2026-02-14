@@ -151,8 +151,6 @@ python app.py
 
 
 ## 📁 Project Structure
-
-```text
 project-root/
 │
 ├── app/                    # Laravel Controllers & Business Logic
