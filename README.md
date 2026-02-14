@@ -59,7 +59,7 @@ Laravel communicates with Flask via HTTP API (JSON Response).
 
 | Component | Technology |
 |--------|--------|
-| Web Framework | Laravel 10 (PHP) |
+| Web Framework | Laravel 10 (PHP) / JavaScript |
 | Machine Learning API | Python Flask |
 | Database | MySQL |
 | Visualization | Chart.js |
@@ -67,6 +67,88 @@ Laravel communicates with Flask via HTTP API (JSON Response).
 | ML Library | scikit-learn |
 | Communication | REST API (JSON HTTP) |
 | Runtime Environment | PHP 8+, Python 3.10+ |
+
+## ⚙️ How to Run This Project
+```text
+# ================================
+# Clean Water Demand Prediction System
+# Laravel + Flask Setup Guide
+# ================================
+
+# 1. Clone repository
+git clone https://github.com/yevoharahap/nama-repository.git
+cd nama-repository
+
+
+# ================================
+# 2. LARAVEL SETUP (WEB SYSTEM)
+# ================================
+
+# install PHP dependencies
+composer install
+
+# create environment file
+cp .env.example .env
+
+# generate app key
+php artisan key:generate
+
+# IMPORTANT:
+# create a MySQL database first (example: clean_water)
+# then edit .env and set:
+# DB_DATABASE=clean_water
+# DB_USERNAME=root
+# DB_PASSWORD=
+
+# migrate database
+php artisan migrate
+
+# install frontend assets
+npm install
+npm run build
+
+# run laravel server
+php artisan serve
+
+
+# ================================
+# 3. PYTHON FLASK SETUP (ML API)
+# ================================
+
+# open new terminal, then:
+cd python
+
+# create virtual environment
+python -m venv venv
+
+# activate venv (Windows)
+venv\Scripts\activate
+
+# (Linux/Mac alternative)
+# source venv/bin/activate
+
+# install python libraries
+pip install -r requirements.txt
+
+# run flask API
+python app.py
+
+
+# ================================
+# ACCESS APPLICATION
+# ================================
+
+# Laravel Web App:
+# http://127.0.0.1:8000
+
+# Flask ML API:
+# http://127.0.0.1:5000
+
+# NOTE:
+# both servers MUST be running
+# if prediction page error -> Flask server is not active
+
+
 
 ## 📁 Project Structure
 
