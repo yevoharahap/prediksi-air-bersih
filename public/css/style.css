@@ -1,0 +1,833 @@
+
+  /* RESET */
+    * { margin:0; padding:0; box-sizing:border-box; font-family:'Nunito',sans-serif; }
+    a { text-decoration:none; }
+    ul { list-style:none; }
+
+    /* NAVBAR */
+    .header .navbar {
+        width:100%; height:80px;
+        display:flex; justify-content:space-between; align-items:center;
+        padding:0 50px; background:#fff; border-bottom:1px solid #eee;
+        position:fixed; top:0; left:0; z-index:1000;
+    }
+    .logo img { height:70px; }
+    .menu ul { display:flex; gap:30px; align-items:center; margin:0; padding:0; }
+
+    /* Hilangkan underline pada navbar link */
+.menu ul li a {
+    color: #000;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 5px 0;
+    transition: .3s;
+    text-decoration: none; /* tambahan */
+}
+.menu ul li a:hover { color:#007bff; }
+
+    /* BUTTON NAV */
+    .prediksi-btn {
+        font-size:16px; font-weight:600; border-radius:20px;
+        background:#f3ef51; padding:8px 22px;
+        transition:.3s; color:#000; display:inline-block;  text-decoration: none; /* tambahan */
+    }
+    .prediksi-btn:hover { background:#e5d600; color:#fff; }
+
+/* Tambahan untuk batasi lebar konten section */
+.container-section {
+  max-width: 1200px;   /* batas lebar */
+  margin: 0 auto;      /* biar selalu ke tengah */
+  padding: 0 20px;     /* spasi kiri kanan */
+}
+
+    /* SECTION */
+.section { 
+  padding-top:100px; 
+  padding-bottom:60px; 
+}
+
+    .section-title h2 { text-align:center; margin-bottom:40px; font-size:35px; font-weight:900; }
+    .section-title p { font-size:16px; color:#666; }
+
+    /* HERO */
+.hero-section { 
+  background: #ffffff; 
+  height: 100vh; /* Membuat full layar */
+  display: flex;
+  align-items: center;
+}
+
+.hero-section .container { 
+  display: flex; 
+  align-items: center; 
+  justify-content: space-between; 
+  gap: 50px; 
+  width: 100%;
+  padding: 0 50px; /* opsional, agar ada jarak tepi */
+}
+
+.hero-text { 
+  flex: 1; 
+  text-align: left; 
+}
+
+.hero-text h3 { 
+  font-size: 18px; 
+  color: #555; 
+  text-transform: uppercase; 
+  letter-spacing: 2px; 
+}
+
+.hero-text h1 { 
+  font-size: 48px; 
+  font-weight: 800; 
+  margin: 15px 0; 
+  color: #000; 
+}
+
+.hero-text p { 
+  font-size: 18px; 
+  color: #666; 
+  max-width: 500px; 
+  margin-bottom: 30px; 
+}
+
+.hero-image { 
+  flex: 1; 
+  text-align: right; 
+}
+
+.hero-image img { 
+  max-width: 100%; 
+  border-radius: 12px; 
+}
+
+@media (max-width: 768px) {
+    .hero-image { display: none; }
+    .hero-section .container { flex-direction: column; text-align: center; }
+    .hero-text { text-align: center; }
+    .hero-text p { margin: 0 auto; }
+    .hero-section { height: auto; padding: 50px 0; } /* agar tetap nyaman di mobile */
+}
+
+    /* ABOUT */
+#about { 
+  min-height:100vh; 
+  padding-top:100px; 
+  padding-bottom:40px; 
+  display:flex; 
+  align-items:center; 
+  background:#ffffff; 
+}
+.about-wrapper {
+  display:flex;
+  justify-content:center;
+  align-items:stretch;
+  gap:40px;
+  max-width:1200px;
+  margin:0 auto;
+  padding:0 20px;
+}
+.about-content {
+  flex:1;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+}
+.about-list { 
+  display:flex; 
+  justify-content:center; 
+  align-items:stretch; 
+  gap:40px; 
+  flex-wrap:wrap;
+}
+.about-list li { 
+  flex:1; 
+  min-width:250px;
+  max-width:280px; 
+  background:#f8f9fa; 
+  border-radius:12px; 
+  padding:20px; 
+  text-align:center; 
+  transition:.3s; 
+}
+.about-list li:hover { 
+  transform:translateY(-5px); 
+  box-shadow:0 6px 16px rgba(0,0,0,.1); 
+}
+.about-list li img { 
+  width:80px; 
+  margin-bottom:15px; 
+}
+.about-list li h3 { 
+  font-size:18px; 
+  margin-bottom:10px; 
+  font-weight:700; 
+}
+.about-list li p { 
+  font-size:14px; 
+  color:#666; 
+}
+
+/* Responsif */
+@media (max-width:992px) {
+  .about-wrapper { 
+    flex-direction:column; 
+    align-items:center; 
+    text-align:center; 
+  }
+  .about-list { 
+    flex-direction:column; 
+    gap:20px; 
+  }
+}
+
+    /* DATASET */
+#dataset {
+  background: #ffffff;  
+}
+
+    .dataset-wrapper { display:flex; align-items:flex-start; justify-content:space-between; gap:40px; }
+    .dataset-form { flex:0 0 55%; }
+    /* Info item dengan ikon */
+
+/* Dataset info tanpa card */
+.dataset-info {
+  flex:0 0 40%;
+}
+
+/* Info item dengan ikon */
+.dataset-info .alur-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.dataset-info .alur-item i {
+  font-size: 20px;
+  color: #198754;   /* hijau bootstrap */
+  flex-shrink: 0;
+  margin-top: 3px;
+}
+
+.dataset-info .alur-item p {
+  margin: 0;
+  font-size: 15px;
+  color: #444;
+  line-height: 1.6;
+  text-align: left;
+}
+
+/* DATASET */
+@media (max-width:992px) {
+  .dataset-wrapper { 
+    flex-direction: column; 
+    align-items: center; 
+  }
+  .dataset-info { 
+    order: 1; 
+    width: 100%; 
+    max-width: 600px; 
+    margin: 0 auto 20px auto; 
+    text-align: center; 
+  }
+  .dataset-form { 
+    order: 2; 
+    width: 100%; 
+    max-width: 600px; 
+    margin: 0 auto; 
+    text-align: center; 
+  }
+}
+
+/* Dataset Table Scroll */
+.table-scroll {
+  max-height: 350px; /* kira-kira cukup 10 baris */
+  overflow-y: auto;
+  overflow-x: auto;
+  border: 1px solid #eee;
+  border-radius: 8px;
+}
+
+/* Scrollbar styling (opsional, biar lebih clean) */
+.table-scroll::-webkit-scrollbar {
+  height: 8px;
+  width: 8px;
+}
+.table-scroll::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 4px;
+}
+.table-scroll::-webkit-scrollbar-thumb:hover {
+  background: #999;
+}
+
+
+/* ANALISIS */
+/* ANALISIS */
+.analisis-section {
+  background:#ffffff;
+  padding:80px 20px;
+}
+
+.analisis-wrapper {
+  display: flex;
+  justify-content: center; /* form ke tengah */
+  align-items: flex-start;
+    align-items: stretch;
+}
+
+.analisis-form {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  background: #fff;
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  display: flex;
+  flex-direction: column;
+}
+
+/* Variabel Independen (X) rapat kiri */
+.x-var-checkbox {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* rata kiri */
+  gap: 5px;                /* jarak antar checkbox */
+  padding-left: 0;          /* hilangkan padding kiri default */
+}
+
+.x-var-checkbox .form-check {
+  display: flex;
+  width: 100%;
+  margin-bottom: 4px;       /* rapatkan vertikal */
+}
+
+.x-var-checkbox .form-check input[type="checkbox"] {
+  margin-right: 8px;        /* jarak antara kotak dan label */
+}
+
+.analisis-info h3 {
+  font-size:22px;
+  font-weight:700;
+  margin-bottom:15px;
+  color:#000;
+}
+
+.analisis-result {
+  max-width: 100%;   /* jangan dibatasi 900px lagi */
+  margin: 0 auto;
+  padding: 0 15px;   /* beri ruang sisi kiri-kanan */
+}
+
+/* Card hasil analisis */
+.analisis-result .card {
+  width: 100%;
+  margin: 20px auto;
+  border-radius: 12px;
+  padding: 25px 30px;   /* tambah padding biar isi lega */
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  background: #fff;
+  text-align: left;
+}
+
+
+/* ANALISIS */
+@media (max-width:992px) {
+  .analisis-wrapper { 
+    flex-direction: column; 
+    align-items: center; 
+  }
+  .analisis-info { 
+    order: 1; 
+    width: 100%; 
+    max-width: 600px; 
+    margin: 0 auto 20px auto; 
+    text-align: center; 
+  }
+  .analisis-form { 
+    order: 2; 
+    width: 100%; 
+    max-width: 600px; 
+    margin: 0 auto; 
+    text-align: center; 
+  }
+}
+
+#showVarBtn {
+  padding: 6px 12px;               /* ukuran tombol */
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: all 0.4s ease;       /* transisi smooth untuk semua perubahan */
+}
+
+/* Saat tombol disable */
+#showVarBtn:disabled {
+  background-color: #6e6d6d;
+  color: #000000;
+  cursor: not-allowed;
+  transform: scale(1);             /* pastikan tidak ada efek hover */
+  box-shadow: none;
+}
+
+/* Saat tombol aktif / enabled */
+#showVarBtn.enabled {
+  background-color: #0d6efd !important;
+  color: #fff !important;
+  cursor: pointer;
+  transform: scale(1);             /* ukuran normal */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Hover aktif tombol */
+#showVarBtn.enabled:hover {
+  background-color: #0b5ed7 !important;
+  transform: scale(1.05);           /* sedikit membesar saat hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Gambar interpretasi agar menyatu dengan latar */
+.analisis-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none !important;   /* hilangkan latar abu */
+  border-radius: 0 !important;   /* hilangkan sudut melengkung */
+  padding: 0 !important;         /* hilangkan padding */
+  box-shadow: none !important;   /* hilangkan bayangan */
+}
+
+.analisis-image img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  border-radius: 0;              /* biar menyatu dengan background */
+}
+
+
+/* Responsif */
+@media (max-width:992px) {
+  .analisis-wrapper {
+    flex-direction: column;
+  }
+  .analisis-image {
+    margin-top: 20px;
+    width: 100%;
+  }
+}
+
+/* PREDIKSI */
+.prediksi-section { 
+  background:#ffffff; 
+  padding:80px 20px; 
+}
+.prediksi-wrapper {
+  display:flex;
+  align-items:flex-start;
+  justify-content:space-between;
+  gap:40px;
+}
+.prediksi-form {
+  flex:0 0 55%;
+  background:#fff;
+  border-radius:12px;
+  padding:25px;
+  box-shadow:0 6px 18px rgba(0,0,0,0.08);
+}
+
+/* Item alur dengan ikon */
+.alur-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.alur-item i {
+  font-size: 20px;
+  color: #198754;   /* hijau konsisten */
+  flex-shrink: 0;
+  margin-top: 3px;
+}
+
+.alur-item p {
+  margin: 0;
+  font-size: 15px;
+  color: #444;
+  line-height: 1.6;
+  text-align: left;
+}
+
+/* Responsif */
+@media (max-width:992px) {
+  .prediksi-wrapper { 
+    flex-direction: column; 
+    align-items: center; 
+  }
+  .prediksi-info { 
+    order: 1; 
+    width: 100%; 
+    max-width: 600px; 
+    margin: 0 auto 20px auto; 
+    text-align: center; 
+  }
+  .prediksi-form { 
+    order: 2; 
+    width: 100%; 
+    max-width: 600px; 
+    margin: 0 auto; 
+    text-align: center; 
+  }
+}
+
+
+   /* FOOTER */
+/* FOOTER UTAMA */
+.footer {
+  margin-top: 80px;
+  font-size: 15px;
+  color: #000000;
+}
+
+/* Main Footer setengah tinggi section */
+.footer-main {
+  background: #111;
+  padding: 40px 20px;   /* sebelumnya 80px → setengahnya */
+}
+
+.footer-main p {
+  color: #bbb;
+  line-height: 1.8;
+  max-width: 700px;
+  margin: 0 auto;
+  font-size: 15px;
+}
+
+/* Bottom Footer */
+.footer-bottom {
+  background: #000;
+  padding: 15px 0;
+  font-size: 14px;
+  color: #777;
+}
+
+
+/* Card hasil analisis */
+.analisis-result .card .card-title {
+  text-align: center;
+  margin-bottom: 15px;
+  font-size:32px; 
+  color:#000000; 
+}
+
+/* Tabel SPSS-style */
+.spss-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+  margin-bottom: 20px;   /* kasih jarak antar tabel/chart */
+}
+
+.spss-table th,
+.spss-table td {
+  border: 1px solid #dee2e6;
+  padding: 8px 12px;
+  vertical-align: middle;
+}
+
+.spss-table th {
+  background-color: #f8f9fa;
+  font-weight: 600;
+  text-align: center;
+}
+
+.spss-table td {
+  text-align: left;
+}
+
+.spss-table td.text-end {
+  text-align: right;
+  font-family: monospace;
+}
+
+/* Card body rapat */
+.analisis-result .card-body {
+  padding: 20px 15px;   /* beri ruang isi */
+  text-align: left;
+}
+
+/* Shadow card */
+.analisis-result .card {
+  width: 100%;
+  margin: 0 auto;
+  border-radius: 12px;
+}
+
+.card-subtitle {
+  font-weight: 600;
+  margin: 20px 0 10px 0;
+  font-size: 1.05rem;
+  color: #333;
+}
+
+.analisis-result canvas {
+  margin-top: 15px;
+  margin-bottom: 25px;
+}
+
+/* Placeholder analisis saat dataset belum ada */
+#analisisPlaceholder {
+  flex: 1; /* ambil ruang penuh */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+  border: 2px dashed #e0e0e0;
+  border-radius: 12px;
+  color: #666;
+  background: #fafafa;
+  text-align: center;
+  padding: 20px;
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+}
+
+#analisisPlaceholder p {
+  margin-bottom: 15px;
+  font-size: 1rem;
+}
+
+#analisisPlaceholder button {
+  min-width: 160px;
+  padding: 8px 20px;
+  border-radius: 6px;
+}
+
+.analisis-form,
+.analisis-form .card,
+.analisis-form .card-body {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Placeholder prediksi saat dataset belum ada */
+#prediksiPlaceholder {
+  flex: 1; /* ambil ruang penuh */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+  border: 2px dashed #e0e0e0;
+  border-radius: 12px;
+  color: #666;
+  background: #fafafa;
+  text-align: center;
+  padding: 20px;
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+}
+
+#prediksi-form h3{
+  font-size:22px;
+  font-weight:700;
+  color:#000;
+}
+
+#prediksiPlaceholder p {
+  margin-bottom: 15px;
+  font-size: 1rem;
+}
+
+#prediksiPlaceholder button {
+  min-width: 160px;
+  padding: 8px 20px;
+  border-radius: 6px;
+}
+
+/* Sesuaikan tombol prediksi (showPredBtn) */
+#showPredBtn {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: all 0.4s ease;
+}
+
+/* Tombol disabled */
+#showPredBtn:disabled {
+  background-color: #6e6d6d;
+  color: #000000;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+/* Tombol aktif */
+#showPredBtn.enabled {
+  background-color: #198754 !important;  /* hijau bootstrap */
+  color: #fff !important;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Hover aktif */
+#showPredBtn.enabled:hover {
+  background-color: #157347 !important;
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.card-style {
+  background:#fff;
+  border-radius:12px;
+  padding:25px;
+  box-shadow:0 6px 18px rgba(0,0,0,0.08);
+}
+
+/* Judul card prediksi konsisten dengan analisis */
+.prediksi-result .card-title {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 28px;
+  font-weight: 800;
+  color: #000;
+}
+
+/* Wrapper tombol di card prediksi */
+.prediksi-result .d-flex.gap-2 {
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+/* Tabel hasil prediksi konsisten */
+.prediksi-result table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+  margin-bottom: 20px;
+}
+
+.prediksi-result table th,
+.prediksi-result table td {
+  border: 1px solid #dee2e6;
+  padding: 8px 12px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+/* Chart & evaluasi di prediksi */
+.prediksi-result canvas {
+  margin-top: 15px;
+  margin-bottom: 25px;
+}
+
+.prediksi-result #predEval {
+  margin-top: 20px;
+}
+
+/* === Tambahan untuk card hasil prediksi === */
+.prediksi-result .card {
+  width: 100%;
+  margin: 20px auto;
+  border-radius: 12px;
+  padding: 25px 30px;   /* padding seragam dengan analisis */
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  background: #fff;
+  text-align: left;
+}
+
+/* Tombol di dalam card prediksi */
+/* === Tombol seragam di card prediksi & analisis === */
+.prediksi-result .btn,
+.analisis-result .btn {
+  min-width: 120px;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  background-color: #0d6efd;   /* biru default */
+  color: #fff;
+  transition: all 0.3s ease;
+}
+
+.prediksi-result .btn:hover,
+.analisis-result .btn:hover {
+  background-color: #0b5ed7;
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+}
+
+/* Warna khusus */
+.prediksi-result .btn-success,
+.analisis-result .btn-success { background-color: #198754; }
+.prediksi-result .btn-success:hover,
+.analisis-result .btn-success:hover { background-color: #157347; }
+
+.prediksi-result .btn-warning,
+.analisis-result .btn-warning { background-color: #ffc107; color:#000; }
+.prediksi-result .btn-warning:hover,
+.analisis-result .btn-warning:hover { background-color: #e0a800; }
+
+.prediksi-result .btn-danger,
+.analisis-result .btn-danger { background-color: #dc3545; }
+.prediksi-result .btn-danger:hover,
+.analisis-result .btn-danger:hover { background-color: #bb2d3b; }
+
+
+#predChart {
+  position: relative;
+  width: 100%;
+  height: 400px; /* tinggi stabil */
+}
+
+/* CETAK HANYA TABEL HASIL PREDIKSI */
+@media print {
+  body * {
+    display: none !important;   /* Sembunyikan semua */
+  }
+
+  #prediksiResultWrapper,
+  #prediksiResultWrapper * {
+    display: block !important;  /* Tampilkan hanya tabel prediksi */
+    visibility: visible !important;
+    position: relative !important;
+  }
+
+  #prediksiResultWrapper table {
+    width: 100% !important;
+    border-collapse: collapse !important;
+    font-size: 14px;
+  }
+
+  #prediksiResultWrapper th,
+  #prediksiResultWrapper td {
+    border: 1px solid #000 !important;
+    padding: 6px 10px !important;
+    text-align: center;
+  }
+
+  #prediksiResultWrapper thead {
+    display: table-header-group !important;
+  }
+
+  #prediksiResultWrapper tr {
+    page-break-inside: avoid !important;
+  }
+
+  body {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+}
+
+
+
+
+
