@@ -68,6 +68,24 @@ Laravel communicates with Flask via HTTP API (JSON Response).
 | Communication | REST API (JSON HTTP) |
 | Runtime Environment | PHP 8+, Python 3.10+ |
 
+## 📁 Project Structure
+```text
+project-root/
+│
+├── app/                    # Laravel Controllers & Business Logic
+├── routes/                 # Web Routes
+├── resources/
+│   └── views/              # Blade Templates (UI Pages)
+├── database/               # Migrations & Seeders
+├── public/                 # CSS, JS, Images, Assets
+│
+├── python/                 # Flask Machine Learning Service
+│   ├── app.py              # Prediction API Endpoint
+│   └── requirements.txt    # Python Dependencies
+│
+└── .env.example            # Environment Configuration Template
+```
+
 ## ⚙️ How to Run This Project
 ```text
 # ================================
@@ -78,7 +96,6 @@ Laravel communicates with Flask via HTTP API (JSON Response).
 # 1. Clone repository
 git clone https://github.com/yevoharahap/nama-repository.git
 cd nama-repository
-
 
 # ================================
 # 2. LARAVEL SETUP (WEB SYSTEM)
@@ -133,35 +150,18 @@ pip install -r requirements.txt
 # run flask API
 python app.py
 
-
 # ================================
 # ACCESS APPLICATION
 # ================================
-
 # Laravel Web App:
 # http://127.0.0.1:8000
-
+#
 # Flask ML API:
 # http://127.0.0.1:5000
-
+#
 # NOTE:
 # both servers MUST be running
 # if prediction page error -> Flask server is not active
 
-
-
-## 📁 Project Structure
-project-root/
-│
-├── app/                    # Laravel Controllers & Business Logic
-├── routes/                 # Web Routes
-├── resources/
-│   └── views/              # Blade Templates (UI Pages)
-├── database/               # Migrations & Seeders
-├── public/                 # CSS, JS, Images, Assets
-│
-├── python/                 # Flask Machine Learning Service
-│   ├── app.py              # Prediction API Endpoint
-│   └── requirements.txt    # Python Dependencies
-│
-└── .env.example            # Environment Configuration Template
+<br>
+```
