@@ -69,19 +69,24 @@ Laravel communicates with Flask via HTTP API (JSON Response).
 | Runtime Environment | PHP 8+, Python 3.10+ |
 
 ## 📁 Project Structure
-project-root
+
+```text
+project-root/
 │
-├── app/                → Laravel Controllers & Logic
-├── routes/             → Web routes
-├── resources/views/    → Blade Templates
-├── database/           → Migration & Seeder
-├── public/             → CSS, JS, Assets
+├── app/                    # Laravel Controllers & Business Logic
+├── routes/                 # Web Routes
+├── resources/
+│   └── views/              # Blade Templates (UI Pages)
+├── database/               # Migrations & Seeders
+├── public/                 # CSS, JS, Images, Assets
 │
-├── python/             → Flask Machine Learning Service
-│   ├── app.py
-│   └── requirements.txt
+├── python/                 # Flask Machine Learning Service
+│   ├── app.py              # Prediction API Endpoint
+│   └── requirements.txt    # Python Dependencies
 │
-└── .env.example
+└── .env.example            # Environment Configuration Template
+
+
 
 
 
